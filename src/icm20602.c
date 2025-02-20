@@ -238,7 +238,7 @@ icm20602_init(struct icm20602_dev * dev)
       ON_ERROR_GOTO((0 == r), return_err);
     }
 
-    tmp = (dev->accel_g) << 2;
+    tmp = (dev->accel_g) << 3;
     r = dev->hal_wr(dev->id, REG_ACCEL_CONFIG, &tmp, 1);
     ON_ERROR_GOTO((0 == r), return_err);
   }
